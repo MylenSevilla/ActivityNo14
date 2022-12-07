@@ -1,0 +1,10 @@
+  - name: Installation of Openstack-Keystone for Ubuntu
+    apt:
+      name:
+        - keystone
+        - apache2
+        - php
+        - libapache2-mod-php
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
